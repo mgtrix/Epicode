@@ -1,0 +1,46 @@
+<h2 class="m-2">Fatture</h2>
+ <div *ngIf='fatture'>
+ <table class="table table-striped" >
+ 
+    <thead>
+        <th>Anno</th>
+        <th>Id</th>
+        <th>Numero</th>
+        <th>Importo</th>
+        <th>Email</th>
+        <th>P.Iva</th>
+        <th>Tel</th>
+        <th>Modifica</th>
+        <th>Elimina</th>
+    </thead>
+     <tbody>
+        <ng-container *ngFor='let fatt of fatture.content'>
+        <tr *ngIf=" fatt.id != 6 && fatt.id != 8 && fatt.id != 10 && fatt.id != 18">
+        <td>{{fatt.anno}}</td>
+        <td>{{fatt.id}}</td>
+        <td>{{fatt.numero}}</td>
+        <td>{{fatt.importo}}</td>    
+        <td>{{fatt.cliente.email}}</td>
+        <td>{{fatt.cliente.partitaIva}}</td>
+        <td>{{fatt.cliente.telefono}}</td>
+        <td><button class="btn btn-primary" routerLink='dettagli/{{fatt.id}}'>Modifica</button></td>
+        <td><button class="btn btn-danger" routerLink='delete/{{fatt.id}}'>Delete</button></td>
+       </tr>  
+       </ng-container>
+    </tbody>
+    <ngb-pagination (pageChange)="getPageFromService($event)" [collectionSize]='fatture.totalElements' [(page)]='page'[(pageSize)]='pageSize' [boundaryLinks]="true"
+    [maxSize]="5"
+     [rotate]="true" 
+     [ellipses]="false" 
+     [boundaryLinks]="true"
+    ></ngb-pagination>
+
+  
+
+
+</table>
+</div>
+
+
+
+

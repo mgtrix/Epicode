@@ -1,0 +1,42 @@
+<h2 class="m-2">Clienti</h2>
+
+<button class="btn btn-primary m-2" routerLink='/clienti/addcliente'>Nuovo Cliente</button>
+ 
+ <div *ngIf='clienti'>
+    <table class="table table-striped">
+        <thead>
+            <th scope="col">Nome</th>
+            <th scope="col">Cognome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Id</th>
+            <th scope="col">Fatture</th>
+            <th scope="col">Modifica</th>
+            <th scope="col">Elimina</th>
+        </thead>
+        <ng-container *ngFor='let cli of clienti.content'>
+        <tbody>
+           
+            <tr>
+                <td>{{cli.nomeContatto}}</td>
+                <td>{{cli.cognomeContatto}}</td>
+                <td>{{cli.email}}</td>
+                <td>{{cli.id}}</td>
+                <td><button  class="btn btn-primary" type="checkbox" routerLink='/clienti/fatturecliente/{{cli.id}}'>Mostra Fatture</button></td>
+                <td><button  class="btn btn-warning" type="checkbox" routerLink='/clienti/modificacliente/{{cli.id}}' >Modifica Cliente</button></td>
+                <td><button   class="btn btn-danger" type="checkbox" routerLink='/clienti/deletecliente/{{cli.id}}'>Elimina</button></td>
+            </tr>
+        </tbody>
+        
+       </ng-container>
+       
+    </table>
+
+    <ngb-pagination (pageChange)="getPageFromService($event)" [collectionSize]='clienti.totalElements' [(page)]='page'[(pageSize)]='pageSize' [boundaryLinks]="true"
+    [maxSize]="5"
+     [rotate]="true" 
+     [ellipses]="false" 
+     [boundaryLinks]="true"
+    ></ngb-pagination>
+</div> 
+    
+

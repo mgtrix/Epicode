@@ -1,0 +1,19 @@
+<div>
+    <h3>Welcome</h3>
+    
+    <form (ngSubmit)='addPostFattura()'>
+        <label>Data</label>
+        <input type="date" name='data' [(ngModel)] ='data'  required>
+        <label>Numero</label>
+        <input type="number" name='numero' [(ngModel)] ='numero'  required>
+        <label>Anno</label>
+        <input type="number" name='anno' [(ngModel)] ='anno'  required>
+        <label>Importo</label>
+        <input type="number" name='importo' [(ngModel)] ='importo'  required>
+        <button  class="btn btn-info m-1" type='submit'>Invia</button>
+        
+  
+        
+    </form>
+    
+    </div>

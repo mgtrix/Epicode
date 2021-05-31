@@ -1,0 +1,72 @@
+<h5 class="text-center m-2">Aggiungi Cliente</h5>
+
+
+<div>
+<form class="m-3" (ngSubmit)='addClientePost()'>
+    <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>partitaIva</label>
+      <input type="number" name='anno' class="form-control m-1" [(ngModel)] ='partitaIva'  required>
+    </div>
+    <div class="form-group col-md-8">
+    <label>ragioneSociale</label>
+    <input type="text" name='numero' class="form-control m-1" [(ngModel)] ='ragioneSociale'  required>
+    </div>   
+    <div class="form-group">
+    <label>tipoCliente</label>
+    <input type="text" name='importo' class="form-control m-1" [(ngModel)] ='tipoCliente'  required>
+    </div>
+    <div class="form-group">
+    <label>email</label>
+    <input type="text"  class="form-control m-1" name='email' [(ngModel)] ='email'  required>
+    </div>
+    <div class="form-group">
+    <label>pec</label>
+    <input type="text " class="form-control m-1" name='pec' [(ngModel)] ='pec'  required>
+    </div>
+    <div class="form-group col-md-6">
+    <label>telefono</label>
+    <input type="text" class="form-control m-1" name='telefono' [(ngModel)] ='telefono'  required>
+    </div>
+    <div class="form-group col-md-4">
+    <label>nomeContatto</label>
+    <input type="text" class="form-control m-1" name='nomeContatto' [(ngModel)] ='nomeContatto'  required>
+    </div>
+    <div class="form-group col-md-2">
+    <label>cognomeContatto</label>
+    <input type="text" class="form-control m-1" name='cognomeContatto' [(ngModel)] ='cognomeContatto'  required>
+    </div>
+    <div class="form-group">
+    <label>emailContatto</label>
+    <input type="text" class="form-control m-1" name='emailContatto' [(ngModel)] ='emailContatto'  required>
+    </div>
+    <div class="form-group">
+        <label>indirizzo</label>
+        <input type="text" class="form-control m-1" name='indirizzo' [(ngModel)] ='indirizzo'  required>
+    </div>
+    <div class="form-group">
+        <label>numerocivico</label>
+        <input type="text" class="form-control m-1" name='numerocivico' [(ngModel)] ='numerocivico'  required>
+    </div>
+    <div class="form-group">
+        <label>cap</label>
+        <input type="text" class="form-control m-1" name='cap' [(ngModel)] ='cap'  required>
+    </div>
+    <div class="form-group">
+        <label>localita</label>
+        <input type="text" class="form-control m-1" name='localita' [(ngModel)] ='localita'  required>
+    </div>
+    <div class="form-group">
+        <label>comune</label>
+        <input type="text" class="form-control m-1" name='comune' [(ngModel)] ='comune'  required>
+    </div>
+    <div class="form-group">
+        <label>provincia</label>
+        <input type="text" class="form-control m-1" name='provincia' [(ngModel)] ='provincia'  required>
+    </div>
+  
+    
+   </div>  
+   <button  class="btn btn-info m-1" type='submit'>Invia</button> 
+    
+</form>

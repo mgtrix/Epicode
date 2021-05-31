@@ -1,0 +1,74 @@
+
+<h5 class="text-center m-2">Modifica Cliente</h5>
+
+
+<div *ngIf='cliente'>
+<form class="m-3" >
+    <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>partitaIva</label>
+      <input type="number" name='anno' class="form-control" [(ngModel)] ='cliente.partitaIva'  required>
+    </div>
+    <div class="form-group col-md-8">
+    <label>ragioneSociale</label>
+    <input type="text" name='numero' class="form-control" [(ngModel)] ='cliente.ragioneSociale'  required>
+    </div>   
+    <div class="form-group">
+    <label>tipoCliente</label>
+    <input type="text" name='importo' class="form-control" [(ngModel)] ='cliente.tipoCliente'  required>
+    </div>
+    <div class="form-group">
+    <label>email</label>
+    <input type="text"  class="form-control" name='email' [(ngModel)] ='cliente.email'  required>
+    </div>
+    <div class="form-group">
+    <label>pec</label>
+    <input type="text " class="form-control" name='pec' [(ngModel)] ='cliente.pec'  required>
+    </div>
+    <div class="form-group col-md-6">
+    <label>telefono</label>
+    <input type="text" class="form-control" name='telefono' [(ngModel)] ='cliente.telefono'  required>
+    </div>
+    <div class="form-group col-md-4">
+    <label>nomeContatto</label>
+    <input type="text" class="form-control" name='nomeContatto' [(ngModel)] ='cliente.nomeContatto'  required>
+    </div>
+    <div class="form-group col-md-2">
+    <label>cognomeContatto</label>
+    <input type="text" class="form-control" name='cognomeContatto' [(ngModel)] ='cliente.cognomeContatto'  required>
+    </div>
+    <div class="form-group">
+    <label>emailContatto</label>
+    <input type="text" class="form-control" name='emailContatto' [(ngModel)] ='cliente.emailContatto'  required>
+    </div>
+    <div class="form-group">
+        <label>indirizzo</label>
+        <input type="text" class="form-control" name='indirizzo' [(ngModel)] ='cliente.indirizzo'  required>
+    </div>
+    <div class="form-group">
+        <label>numerocivico</label>
+        <input type="text" class="form-control" name='numerocivico' [(ngModel)] ='cliente.numerocivico'  required>
+    </div>
+    <div class="form-group">
+        <label>cap</label>
+        <input type="text" class="form-control" name='cap' [(ngModel)] ='cliente.cap'  required>
+    </div>
+    <div class="form-group">
+        <label>localita</label>
+        <input type="text" class="form-control" name='localita' [(ngModel)] ='cliente.localita'  required>
+    </div>
+    <div class="form-group">
+        <label>comune</label>
+        <input type="text" class="form-control" name='comune' [(ngModel)] ='cliente.comune'  required>
+    </div>
+    <div class="form-group">
+        <label>provincia</label>
+        <input type="text" class="form-control" name='provincia' [(ngModel)] ='cliente.provincia'  required>
+    </div>
+  
+    
+   </div>  
+   <button  class="btn btn-info m-1" (click)='clientServ.putModificaCliente(cliente.id, cliente)'>Invia</button> 
+    
+</form>
+</div>

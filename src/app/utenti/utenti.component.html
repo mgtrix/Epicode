@@ -1,0 +1,21 @@
+<h2 class="m-2">Utenti</h2>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <th  scope="col">Id</th>
+            <th  scope="col">Username</th>
+            <th  scope="col">Email</th>
+        </thead>
+        <ng-container *ngFor='let u of get.users'>
+        <tbody>
+            <tr>
+                <td>{{u.id}}</td>
+                <td>{{u.username}}</td>
+                <td>{{u.email}}</td>
+            </tr>
+        </tbody>
+       </ng-container>
+    </table>
+    
+
+</div>

@@ -1,0 +1,22 @@
+<h1 class="text-center" >{{title}}</h1>
+<nav ngbNav #nav="ngbNav" class="nav-tabs">
+  <ng-container ngbNavItem>
+    <a ngbNavLink routerLink=''>Home</a>
+  </ng-container>
+  <ng-container ngbNavItem>
+    <a ngbNavLink routerLink='login'>Login</a>
+  </ng-container>
+  <ng-container ngbNavItem>
+    <a ngbNavLink routerLink='signup'>SignUp</a>
+  </ng-container>
+  <ng-container ngbNavItem>
+    <a ngbNavLink routerLink='utenti'>Utenti</a>
+  </ng-container>
+  <ng-container ngbNavItem>
+    <a ngbNavLink routerLink='fatture'>Fatture</a>
+  </ng-container>
+  <ng-container ngbNavItem>
+    <a ngbNavLink routerLink='clienti'>Clienti</a>
+  </ng-container>
+</nav>
+<router-outlet></router-outlet>

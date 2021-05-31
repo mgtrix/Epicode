@@ -1,0 +1,14 @@
+<h1 class="text-center">Login</h1>
+
+<div class="m-5">
+    <h3 >Welcome</h3>
+    
+    <form (ngSubmit)='inviaDatiLogin()'>
+        <label class="col">Nome</label>
+        <input class="form-control m-1" type="text" name='username' value="text" [(ngModel)] ='username'  required>
+        <label class="col">Password</label>
+        <input class="form-control m-1" type="password" name='password' value="text" [(ngModel)] ='password'  required>
+        <button  class="btn btn-info m-1" type='submit'>Invia</button>
+    </form>
+    
+ </div>

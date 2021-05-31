@@ -1,0 +1,24 @@
+<h4 class="m-3">Aggiungi Nuova Fattura</h4>
+
+<div class="m-2">
+    <form  (ngSubmit)='addPostFattura()'>
+        
+        <label class="col">Data</label>
+        <input type="date" name='data' [(ngModel)] ='data'  required>
+        <label class="col">Numero</label>
+        <input type="number" name='numero' [(ngModel)] ='numero'  required>
+        <label class="col">Anno</label>
+        <input type="number" name='anno' [(ngModel)] ='anno'  required>
+        <label class="col">Importo</label>
+        <input type="number" name='importo' [(ngModel)] ='importo'  required>
+        <label class="col">Stato</label>
+        <select  name="stato" id="">
+            <option value="stato">Pagata</option>
+            <option value="stato">Non Pagata</option>
+        </select>
+        <!-- <input type="number" name='importo' [(ngModel)] ='stato'  required> -->
+        <label class="col"></label>
+        <button  class="btn btn-info m-1" type='submit'>Invia</button>        
+    </form>
+    
+    </div>

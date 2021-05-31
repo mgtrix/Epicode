@@ -1,0 +1,40 @@
+<h5 class="text-center">Fatture Cliente</h5>
+<button class="btn btn-info m-2" routerLink='/clienti/addfatturacliente/{{id}}'>Nuova Fattura Cliente</button>
+<div *ngIf='fatture'>
+  
+<table class="table table-striped">
+ <thead>
+   <th>Id fattura</th>
+   <th>Cliente </th>
+   <th>Cognome</th>
+   <th>numero</th>
+   <th>data</th>
+   <th>importo</th>
+   <!-- <th>Stato</th> -->
+   <th>Modifica</th>
+   <th>Elimina</th>
+  
+ </thead>
+
+ <tbody>
+  <ng-container *ngFor='let f of fatture'>
+     <tr>
+         <td>{{f.id}}</td>
+         <td>{{f.cliente.id}}</td>
+         <td>{{f.cliente.cognomeContatto}}</td>
+         <td>{{f.numero}}</td>
+         <td>{{f.data}}</td>
+         <td>{{f.importo}}</td>
+         <!-- <td>{{f.stato.nome}}</td> -->
+       
+       <td><button class="btn btn-info m-1"routerLink='/clienti/modificafattcliente/{{f.id}}' >Modifica Fattura</button></td> 
+       <td><button class="btn btn-danger m-1" routerLink='/clienti/deletefattcliente/{{f.id}}'>Elimina Fattura</button></td> 
+     </tr>
+    </ng-container>
+ </tbody>
+
+
+
+</table>
+</div>
+

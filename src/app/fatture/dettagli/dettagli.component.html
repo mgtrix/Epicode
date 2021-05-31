@@ -1,0 +1,16 @@
+<h5 class="text-center m-2">Modifica Fattura</h5>
+                <div *ngIf='fattura'>
+                 <form class="m-3" >
+                        <label class="col">importo</label>
+                        <input class="m-1" type="text" name='urlModified.importo' [(ngModel)]='fattura.importo'>
+                        <label class="col">Numero</label>
+                        <input class="m-1" type="text" name='urlModified.numero' [(ngModel)]='fattura.numero'>
+                        <label class="col">Anno</label>
+                        <input class="m-1" type="text" name='urlModified.anno' [(ngModel)]='fattura.anno'>
+                        <label class="col">Data</label>
+                        <input class="m-1" type="text" name='urlModified.data' [(ngModel)]='fattura.data'>
+                </form>
+                <button class="btn btn-info m-2"(click)='fattService.putSingolaFattura(fattura.id, fattura)' >Save</button>
+               </div>
+            
+  
